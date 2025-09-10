@@ -1,0 +1,44 @@
+﻿@model PartyInvites.Models.GuestResponse
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <div class="card-header text-center"><h4>Your first swimming journey with us start here!</h4></div>
+    <p class="card-body">
+        <form asp-action="RegistrationForm" method="post">
+            <div class="mb-3">
+                <label asp-for="Name">Your name:</label>
+                <input class="form-control" asp-for="Name" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Email">Your email:</label>
+                <input class="form-control" asp-for="Email" />
+            </div>
+            <div class="mb-3">
+                <label asp-for="Phone">Your phone:</label>
+                <input class="form-control" asp-for="Phone" />
+            </div>
+            <div class="mb-3">
+                <label>Will you attend?</label>
+                <select class="form-control" asp-for="WillAttend">
+                    <option value=" ">Choose an option</option>
+                    <option value="true">Yes, I'll be there</option>
+                    <option value="false">No, I can't come</option>
+                </select>
+            </div>
+            <button class="btn btn-primary" type="submit"> Submit</button>
+            <div asp-validation-summary="All"></div>
+        </form>
+    </div>
+</body>
+</html>
+

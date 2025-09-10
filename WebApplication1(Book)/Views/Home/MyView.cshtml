@@ -1,0 +1,23 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Welcome page</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="text-center">
+        <h1 style="color: @ViewBag.GreetingColor; font-weight: bolder">@ViewBag.Greeting</h1>
+        <h3 style="color: mediumpurple; font-weight: bolder">This site is for registering to swimming pool tournament</h3>
+        <h4 style="color: mediumpurple; font-weight: lighter">Let's start your swimming journey!</h4>
+
+
+        <a class="btn btn-primary" style="background-color: mediumpurple" asp-action="RegistrationForm">Register</a>
+    </div>
+</body>
+</html>
